@@ -6,11 +6,13 @@ package com.sandinh.couchbase
 
 import com.couchbase.client.java.document.JsonDocument
 import com.couchbase.client.java.document.json.{JsonArray, JsonObject}
+import com.google.inject.Inject
 import com.sandinh.couchbase.document.JsDocument
 import play.api.libs.json.Json
-import scala.concurrent.ExecutionContext.Implicits.global
 
-class JsCodecSpec extends GuiceSpecBase {
+import scala.concurrent.ExecutionContext
+
+class JsCodecSpec @Inject() (implicit val executionContext: ExecutionContext) extends GuiceSpecBase {
   val key = "test_key"
 
   def jsGet = cb.bk1.getJsT[Trophy](key) must beEqualTo(Trophy.t1).await
