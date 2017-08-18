@@ -4,6 +4,9 @@ couchbase-scala
 
 This is a library for accessing Couchbase in Scala.
 
+## TODO
+1. Critical: Recompile [play-standalone library](https://github.com/ohze/playframework-standalone) (my boss's old project) to bring back the play components were included in cb-scala_2.11 that i removed in this fork.
+
 ## Using
 couchbase-scala is [published to maven center](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.sandinh%22%20couchbase-scala)
 
