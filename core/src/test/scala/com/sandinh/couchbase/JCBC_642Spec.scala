@@ -1,9 +1,11 @@
 package com.sandinh.couchbase
 
 import com.couchbase.client.java.document.JsonStringDocument
-import scala.concurrent.ExecutionContext.Implicits.global
+import com.google.inject.Inject
 
-class JCBC_642Spec extends GuiceSpecBase {
+import scala.concurrent.ExecutionContext
+
+class JCBC_642Spec @Inject() (implicit val executionContext: ExecutionContext)  extends GuiceSpecBase {
   "CBCluster" should {
     "pass JCBC-642" in {
       val content = "test_value_JCBC_642"

@@ -1,11 +1,12 @@
 package com.sandinh.couchbase
 
-import javax.inject.Inject
+import com.google.inject.Inject
 import com.sandinh.couchbase.access.JsCao1
-import scala.concurrent.ExecutionContext.Implicits.global
 
-class CaoSpec extends GuiceSpecBase {
-  @Inject private var trophyCao: TrophyCao = null
+import scala.concurrent.ExecutionContext
+
+class CaoSpec @Inject() (implicit val executionContext: ExecutionContext)  extends GuiceSpecBase {
+  @Inject private var trophyCao: TrophyCao = _
 
   val username = "giabao"
   "Cao" should {
