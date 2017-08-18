@@ -1,6 +1,13 @@
 ## Changelog
 we use [Semantic Versioning](http://semver.org/)
 
+#### v7.3.2 (thanhpv's fork pj)
+
++ update `scala 2.12.3`
++ update `play-json 2.6.3`, `spec2-core 3.8.9`, `couchbase client 2.4.7`
++ add `com.typesafe.config 1.3.1` because `com.typesafe.config` has been removed from many Typesafe's libraries
++ remove `play-standalone` with play components: `PlayCBCluster` and `PlayModule`. TODO: bring them back in next version
+
 ##### v7.3.1
 + update couchbase java-client 2.3.1, play-json 2.5.4
 + remove config `com.sandinh.couchbase.queryEnabled`
