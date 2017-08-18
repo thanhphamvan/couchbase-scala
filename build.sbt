@@ -28,7 +28,7 @@ lazy val core = (project in file("core"))
   .settings(commonSettings ++ Seq(
     name := "couchbase-scala",
     libraryDependencies ++= Seq(
-      "com.couchbase.client"    % "java-client"     % "2.4.7",
+      "com.couchbase.client"    % "java-client"     % "2.3.1",
       "javax.inject"            % "javax.inject"    % "1",
       "com.typesafe"            % "config"          % "1.3.1",
       "com.typesafe.play"       %% "play-json"      % "2.6.3", //require java 8
